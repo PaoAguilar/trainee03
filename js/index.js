@@ -22,10 +22,11 @@ const showTags = async () => {
 const showPosts = async () => {
   try {
     const posts = await JsonRequestSingleton.getInstance().getRequest("posts");
-    // console.log(posts);
+
+    console.log(posts);
     const lastThree = posts.slice(8);
     console.log(lastThree);
-    console.log(posts);
+
     // showing last three posts
     lastThree.map((result) => {
       lastThreeContainer.innerHTML += `
@@ -34,8 +35,20 @@ const showPosts = async () => {
         </div>
         `;
     });
+    // showing remaining posts
+    const startIndexToRemove = posts.length - 3;
+    const remainingPosts = posts.slice(0, startIndexToRemove);
+    remainingPosts.map((result) => {
+      remainingContainer.innerHTML += `
+              <div class="post">
+                  <img src="${result.image}"/>
+              </div>
+              `;
+    });
+
     // showing all posts
-    posts.map((result) => {
+    const showDescPosts = posts.reverse();
+    showDescPosts.map((result) => {
       allPostsContainer.innerHTML += `
           <div class="post">
               <img src="${result.image}"/>
@@ -45,23 +58,5 @@ const showPosts = async () => {
   } catch (error) {}
 };
 
-// const showRemaining = async () => {
-//   try {
-//     const posts = await JsonRequestSingleton.getInstance().getRequest("posts");
-//     const startIndexToRemove = posts.length - 3;
-//     console.log(posts.splice(startIndexToRemove, 3));
-//     // const remaingingPosts = posts.splice(8);
-//     // lastThree.map((result) => {
-//     //   lastThreeContainer.innerHTML += `
-//     //               <div class="post">
-//     //                   <img src="${result.image}"/>
-//     //               </div>
-//     //               `;
-//     // });
-//   } catch (error) {}
-// };
-
 showTags();
 showPosts();
-// showRemaining();
-// showAllPosts();

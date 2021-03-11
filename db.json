@@ -111,6 +111,7 @@
         "tags": [4, 6, 3, 2]
       },
       {
+        "id": 12,
         "title": "IT",
         "subTitle": "Super Smash Bros Ultimate",
         "image": "https://i.pinimg.com/564x/2f/b5/f8/2fb5f897cfd3e882a19f5cbb98dca860.jpg",
@@ -118,8 +119,7 @@
         "createDate": "2019/07/12",
         "likes": 1,
         "author": 2,
-        "tags": [1, 2, 3],
-        "id": 12
+        "tags": [1, 2, 3]
       }
     ],
     "tags": [
