@@ -25,8 +25,7 @@ const showTags = async () => {
     const tagButton = document.querySelectorAll(`.tag-button`);
     tagButton.forEach((element, index) => {
       element.addEventListener("click", () => {
-        console.log(tagButton.value);
-        showPostForTags();
+        showPostForTags(index + 1);
       });
     });
   } catch (error) {
@@ -35,18 +34,30 @@ const showTags = async () => {
 };
 
 // show posts when click the tag
-const showPostForTags = async () => {
+const showPostForTags = async (clickedTag) => {
   try {
     const postForTagContainer = document.querySelector(
       ".posts-for-tag-container"
     );
-    const posts = await JsonRequestSingleton.getInstance().getRequest("posts");
+    postForTagContainer.innerHTML = "";
+    const posts = await JsonRequestSingleton.getInstance().getRequest(
+      `posts?tags_like=${clickedTag}`
+    );
     posts.map((result) => {
-      postForTagContainer.innerHTML += `
-                <div class="post">
-                    <img src="${result.image}"/>
-                </div>
-                `;
+      console.log(result);
+      if (result === []) {
+        postForTagContainer.innerHTML += `
+        <div class="post">
+            <h3>There are not posts with this tag</h3>
+        </div>
+        `;
+      } else {
+        postForTagContainer.innerHTML += `
+        <div class="post">
+            <img src="${result.image}"/>
+        </div>
+        `;
+      }
     });
   } catch (error) {}
 };
@@ -93,4 +104,3 @@ const showPosts = async () => {
 
 showTags();
 showPosts();
-// filterPostsByTag();
