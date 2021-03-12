@@ -4,19 +4,51 @@ const allPostsContainer = document.querySelector(".allposts-container");
 const lastThreeContainer = document.querySelector(".last-three-container");
 const remainingContainer = document.querySelector(".remaining-container");
 
+const managerMenu = document.querySelector("#manager");
+
+managerMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("HI EN MANAGER");
+  window.location.href = "../postManager.html";
+});
+
 const showTags = async () => {
   try {
     const tags = await JsonRequestSingleton.getInstance().getRequest("tags");
-    console.log(tags[0].name);
+    // console.log(tags[0].name);
 
     tags.map((result) => {
       tagsContainer.innerHTML += `
         <button class="tag-button"><span class="icon icon-price-tag"> ${result.name}</span></button>
         `;
     });
+    const tagButton = document.querySelectorAll(`.tag-button`);
+    tagButton.forEach((element, index) => {
+      element.addEventListener("click", () => {
+        console.log(tagButton.value);
+        showPostForTags();
+      });
+    });
   } catch (error) {
     console.log(error);
   }
+};
+
+// show posts when click the tag
+const showPostForTags = async () => {
+  try {
+    const postForTagContainer = document.querySelector(
+      ".posts-for-tag-container"
+    );
+    const posts = await JsonRequestSingleton.getInstance().getRequest("posts");
+    posts.map((result) => {
+      postForTagContainer.innerHTML += `
+                <div class="post">
+                    <img src="${result.image}"/>
+                </div>
+                `;
+    });
+  } catch (error) {}
 };
 
 const showPosts = async () => {
@@ -32,6 +64,7 @@ const showPosts = async () => {
       lastThreeContainer.innerHTML += `
         <div class="post">
             <img src="${result.image}"/>
+            <p class="post-info">Hojhkjhkjhkjhla</p>
         </div>
         `;
     });
@@ -60,3 +93,4 @@ const showPosts = async () => {
 
 showTags();
 showPosts();
+// filterPostsByTag();
