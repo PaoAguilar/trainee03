@@ -3,13 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Posts Manager</title>
   </head>
   <body>
     <section class="menu">
       <a id="home" href="">Home</a>
       <a id="search" href="">Search for a Post</a>
+    </section>
+    <section class="elements-container">
+      <div class="post-manager">
+        <h2 class="title">Movies Manager</h2>
+        <p>You can create a new post here</p>
+      <form action="#" class="form">
+        <div class="container-grid">
+          <div class="wrap-elements">
+            <!-- TITLE -->
+            <div class="input-group">
+              <label for="name" class="label">Movie</label>
+              <input
+                id="name"
+                placeholder="Enter the name of the movie"
+                type="text"
+                class="input"
+              />
+            </div>
+            <!-- SUBTITLE -->
+            <div class="input-group">
+              <label for="name" class="label">Subtitle</label>
+              <input
+                id="name"
+                placeholder="Enter the subtitle of the movie"
+                type="text"
+                class="input"
+              />
+            </div>
+            <!-- URL -->
+            <div class="input-group">
+              <label for="name" class="label">Cover</label>
+              <input
+                id="name"
+                placeholder="Enter an image URL"
+                type="text"
+                class="input"
+              />
+            </div>
+             <!-- AUTHOR -->
+             <div class="input-group">
+              <label for="name" class="label">Author</label>
+              <input
+                id="name"
+                placeholder="Enter the subtitle of the movie"
+                type="text"
+                class="input"
+              />
+            </div>
+            <!-- CREATION DATE -->
+            <div class="input-group">
+              <label for="name" class="label">Author</label>
+              <input
+                id="name"
+                placeholder="Enter the subtitle of the movie"
+                type="date"
+                class="input"
+              />
+            </div>
+            <!-- CONTENT -->
+            <div class="input-group">
+              <label for="content" class="label">Synopsis</label>
+              <textarea
+                id="content"
+                placeholder="Enter the synopsis of the movie"
+                type="text"
+                class="input"
+              ></textarea>
+            </div>
+            <!-- TAGS -->
+            <div class="input-group">
+              <label for="name" class="label">Tags</label>
+              <input type="checkbox" id="science-fiction" value="1" />  Science fiction
+              <input type="checkbox" id="comedy" value="2" /> Comedy
+              <input type="checkbox" id="fantasy" value="3" />  Fantasy
+              <input type="checkbox" id="terror" value="4" />  Terror
+              <input type="checkbox" id="historical" value="5" />  Historical
+              <input type="checkbox" id="action" value="6" />  Action
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="create-button">Create Movie</button>
+      </form>
+    </div>
     </section>
     <script type="module" src="./js/postManager.js"></script>
   </body>
