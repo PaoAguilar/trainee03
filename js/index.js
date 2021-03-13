@@ -58,7 +58,7 @@ const showPostForTags = async (clickedTag) => {
         `;
       } else {
         postForTagContainer.innerHTML += `
-        <div class="post">
+        <div class="post" id=pos">
             <img src="${result.image}"/>
         </div>
         `;
@@ -78,18 +78,18 @@ const showPosts = async () => {
     // showing last three posts
     lastThree.map((result) => {
       lastThreeContainer.innerHTML += `
-        <div class="post">
-            <img src="${result.image}"/>
-            <p class="post-info">Hojhkjhkjhkjhla</p>
+        <div class="post" id="${result.id}">
+            <img src="${result.image}"/
         </div>
         `;
     });
+
     // showing remaining posts
     const startIndexToRemove = posts.length - 3;
     const remainingPosts = posts.slice(0, startIndexToRemove);
     remainingPosts.map((result) => {
       remainingContainer.innerHTML += `
-              <div class="post">
+              <div class="post" id="${result.id}">
                   <img src="${result.image}"/>
               </div>
               `;
@@ -99,13 +99,23 @@ const showPosts = async () => {
     const showDescPosts = posts.reverse();
     showDescPosts.map((result) => {
       allPostsContainer.innerHTML += `
-          <div class="post">
+          <div class="post" id="${result.id}">
               <img src="${result.image}"/>
           </div>
           `;
     });
-  } catch (error) {}
-};
+  } catch (error) {
+    console.log(error);
+  }
 
+  const postDiv = document.querySelectorAll(`.post`);
+  postDiv.forEach((element, index) => {
+    element.addEventListener("click", () => {
+      console.log(`hice click, ${index}`);
+      console.log(element.id);
+      window.location.href = `../postInfo.html?id=${element.id}`;
+    });
+  });
+};
 showTags();
 showPosts();
