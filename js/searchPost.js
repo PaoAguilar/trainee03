@@ -39,10 +39,18 @@ const getPostBytitle = async (title) => {
     posts.map((result) => {
       console.log(result);
       postForTitleContainer.innerHTML += `
-        <div class="post">
+        <div class="post" id="${result.id}">
             <img src="${result.image}"/>
         </div>
         `;
+    });
+    const postDiv = document.querySelectorAll(`.post`);
+    postDiv.forEach((element, index) => {
+      element.addEventListener("click", () => {
+        console.log(`hice click, ${index}`);
+        console.log(element.id);
+        window.location.href = `../postInfo.html?id=${element.id}`;
+      });
     });
 
     console.log(posts);

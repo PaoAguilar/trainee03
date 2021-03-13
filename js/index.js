@@ -9,7 +9,6 @@ const searchMenuButton = document.querySelector("#search");
 
 postManagerMenuButton.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("HI EN MANAGER");
   window.location.href = "../postManager.html";
 });
 searchMenuButton.addEventListener("click", (e) => {
@@ -58,13 +57,21 @@ const showPostForTags = async (clickedTag) => {
         `;
       } else {
         postForTagContainer.innerHTML += `
-        <div class="post" id=pos">
+        <div class="post" id="${result.id}">
             <img src="${result.image}"/>
         </div>
         `;
       }
     });
   } catch (error) {}
+  const postDiv = document.querySelectorAll(`.post`);
+  postDiv.forEach((element, index) => {
+    element.addEventListener("click", () => {
+      console.log(`hice click, ${index}`);
+      console.log(element.id);
+      window.location.href = `../postInfo.html?id=${element.id}`;
+    });
+  });
 };
 
 const showPosts = async () => {
@@ -117,5 +124,6 @@ const showPosts = async () => {
     });
   });
 };
+
 showTags();
 showPosts();

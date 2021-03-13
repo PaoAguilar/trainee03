@@ -112,3 +112,58 @@ img {
   color: #313131;
   font-size: 1.25rem;
 }
+
+/* INFO POST */
+.info {
+  padding: 2rem 4rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.show-icon-info {
+  display: flex;
+}
+
+.title {
+  font-size: 3rem;
+  color: #3f0d12;
+}
+
+.cover {
+  border-radius: 20px;
+  overflow: hidden;
+  /* position: relative; */
+  display: inline-block;
+  width: 180px;
+  height: 17rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 20px;
+  transform-origin: center left;
+}
+
+.synopsis {
+  width: 30rem;
+  color: #3f0d12;
+}
+
+.create-date,
+.likes,
+.author {
+  color: #3f0d12;
+  padding: 1rem;
+}
+
+.show-comment {
+  padding: 2rem;
+}
+
+.comments {
+  padding: 0 4rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
