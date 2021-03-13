@@ -242,3 +242,23 @@ img {
 .create-button:hover {
   background-color: #701922;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  max-height: 100px;
+  overflow-y: scroll;
+  width: 30rem;
+}
+
+.author-dropdown {
+  height: 30px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.author-dropdown:hover {
+  height: 30px;
+  background-color: #f1f1f1;
+  /* max-width: 30%; */
+}
