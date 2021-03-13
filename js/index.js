@@ -4,12 +4,17 @@ const allPostsContainer = document.querySelector(".allposts-container");
 const lastThreeContainer = document.querySelector(".last-three-container");
 const remainingContainer = document.querySelector(".remaining-container");
 
-const managerMenu = document.querySelector("#manager");
+const postManagerMenuButton = document.querySelector("#manager");
+const searchMenuButton = document.querySelector("#search");
 
-managerMenu.addEventListener("click", (e) => {
+postManagerMenuButton.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("HI EN MANAGER");
   window.location.href = "../postManager.html";
+});
+searchMenuButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "../searchPost.html";
 });
 
 const showTags = async () => {
