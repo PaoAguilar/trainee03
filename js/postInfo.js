@@ -62,19 +62,39 @@ const showForId = async () => {
             
         </div>
   `;
+
+  // Here a got all the id tags
+  const idTags = [];
+  posts.tags.map((elem) => {
+    console.log(elem);
+    idTags.push(elem);
+  });
+  console.log(idTags);
+  // console.log(Array.from(idTags));
+
+  // Make likes to the post
   const likeButton = document.querySelector(".likes");
   const numberOfLikes = document.querySelector(".icon-heart");
-  const like = {
-    likes: numberOfLikes.value,
-  };
-  const jsonData = JSON.stringify(like);
   let count = 0;
-  console.log(numberOfLikes);
   likeButton.addEventListener("click", async (e) => {
+    console.log(e.target.elements);
     try {
-      // await JsonRequestSingleton.getInstance().putRequest(jsonData, id);
-      const likes = (numberOfLikes.value = ++count);
-      numberOfLikes.innerText = ` ${likes}`;
+      count = count + 1;
+      const countingLikes = posts.likes + count;
+      const likesOnCLick = (numberOfLikes.value = countingLikes);
+      const countLikes = (numberOfLikes.innerText = likesOnCLick);
+      const editPost = {
+        title: posts.title,
+        subTitle: posts.subTitle,
+        image: posts.image,
+        author: posts.author,
+        body: posts.body,
+        createDate: posts.createDate,
+        tags: idTags,
+        likes: countLikes,
+      };
+      const jsonData = JSON.stringify(editPost);
+      await JsonRequestSingleton.getInstance().putRequest(jsonData, id);
     } catch (error) {
       console.log(error);
     }
@@ -86,7 +106,6 @@ const showForId = async () => {
             <div>User: Comment: ${result.comment}</div>
             `;
   });
-  //   console.log(posts);
 };
 showForId();
 

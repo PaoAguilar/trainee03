@@ -70,6 +70,7 @@ export const createNewPost = async (
     createDate: creationDatePost.value,
     body: contentPost.value,
     tags: tags,
+    likes: 0,
   };
   const jsonData = JSON.stringify(post);
   try {

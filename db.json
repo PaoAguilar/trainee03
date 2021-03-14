@@ -3,37 +3,37 @@
     {
       "id": 1,
       "title": "Titanic",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American epic romance and disaster film",
       "image": "https://i.pinimg.com/564x/dd/b5/a9/ddb5a9bf24e9889482905365574b9e32.jpg",
       "body": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
       "createDate": "2018/06/18",
       "likes": 12,
       "author": 3,
       "tags": [
-        1,
+        5,
         6
       ]
     },
     {
-      "id": 2,
       "title": "Maleficent",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American dark fantasy adventure film",
       "image": "https://i.pinimg.com/564x/4a/a7/09/4aa709fb827464c325ee3c63f07b8a6c.jpg",
-      "body": "Maleficent is a powerful fairy living in the Moors, a magical forest realm bordering a human kingdom. As a young girl, Maleficent meets and falls in love with a human peasant boy named Stefan.",
-      "createDate": "2018/11/20",
-      "likes": 2,
       "author": 1,
+      "body": "Maleficent is a powerful fairy living in the Moors, a magical forest realm bordering a human kingdom. As a young girl, Maleficent meets and falls in love with a human peasant boy named Stefan.",
+      "createDate": "2019/06/18",
       "tags": [
-        1,
-        2
-      ]
+        3,
+        6
+      ],
+      "likes": 3,
+      "id": 2
     },
     {
       "id": 3,
       "title": "Toy Story 4",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American computer-animated comedy film",
       "image": "https://i.pinimg.com/564x/05/c4/51/05c4511541727e7f70da52a25dcea8d5.jpg",
-      "body": "With her wings and staff, this goddess's attacks cover a wide range. With her up smash, neutral special, and side special, she can create a ranged attack in almost every direction except for directly beneath her! Keep the pressure on your opponents from a distance with ranged attacks!",
+      "body": "Nine years previously, following the events of Toy Story 2, Woody and Bo Peep attempt to rescue RC, Andy's remote-controlled car, from a rainstorm. Just as they finish the rescue, Woody watches as Bo is donated to a new owner, and considers going with her, but ultimately decides to remain with Andy",
       "createDate": "2018/10/18",
       "likes": 3,
       "author": 3,
@@ -44,64 +44,53 @@
     },
     {
       "id": 4,
-      "title": "Siempre a tu lado",
-      "subTitle": "Super Smash Bros Ultimate",
+      "title": "Hachi: A Dog's Tale",
+      "subTitle": "American drama film that is an adaptation of the 1987 Japanese film Hachikō Monogatari.",
       "image": "https://i.pinimg.com/564x/44/24/2a/44242ac1256063ae5918fc973172b740.jpg",
-      "body": "He's the protagonist of Final Fantasy VII. You can also select his Advent Children outfit. Charging up his Limit Gauge increases his special move abilities! Land a powerful hit!. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque massa nec malesuada interdum.",
+      "body": "Parker Wilson, a professor of music who commutes to nearby Providence, Rhode Island, finds a lost puppy on the station platform in Bedridge and takes him home for the night. (The audience sees that it was freighted from a Japanese monastery to the United States and that the basket's tag was torn in transit.)",
       "createDate": "2018/10/17",
       "likes": 7,
       "author": 3,
       "tags": [
-        4,
-        6,
-        3,
-        2
+        5
       ]
     },
     {
-      "id": 5,
       "title": "The proposal",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American romantic comedy",
       "image": "https://i.pinimg.com/564x/4f/fa/ac/4ffaacc991ffa88ef0461e0ef8efbdc5.jpg",
-      "body": "Attacks with a variety of weapons. Covering opponents with ink leads to more and more damage—plus these Inklings are really fashionable! Good news: The new fighters, Inkling and Ridley, have Super Smash Bros. series amiibo figures on the way! #SmashBros",
-      "createDate": "2018/06/12",
-      "likes": 7,
       "author": 2,
+      "body": "Margaret Tate is a Canadian, who is executive editor-in-chief of a New York book publishing company. After learning she is about to be deported back to Canada because she violated the terms of her work visa, she persuades her assistant, Andrew Paxton, to marry her",
+      "createDate": "2018/06/12",
       "tags": [
-        2,
-        3,
-        4,
-        6
-      ]
+        2
+      ],
+      "likes": 8,
+      "id": 5
     },
     {
       "id": 6,
       "title": "The pianist",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "Biographical war drama film",
       "image": "https://i.pinimg.com/564x/5f/46/67/5f4667566982a8a49a0522428d2571f9.jpg",
-      "body": "Although not as powerful as Samus, her speed is exceptional! Her Paralyzer not only has the ability to stun opponents, but it can also turn into a whip. For her Final Smash, she dons her suit and fires a powerful laser!",
+      "body": "n September 1939, Władysław Szpilman, a Polish-Jewish pianist, is playing live on the radio in Warsaw when the station is bombed during Nazi Germany's invasion of Poland. Hoping for a quick victory, Szpilman rejoices with his family at home when he learns that Britain and France have declared war on Germany, but the promised aid does not come.",
       "createDate": "2018/10/28",
       "likes": 7,
       "author": 3,
       "tags": [
-        4,
-        6,
-        3,
-        2
+        5
       ]
     },
     {
       "id": 7,
       "title": "Coco",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American computer-animated fantasy film ",
       "image": "https://i.pinimg.com/564x/69/3e/d1/693ed133b86602c51d647133ac08e61f.jpg",
-      "body": "Link has been redesigned to match his appearance in The Legend of Zelda: Breath of the Wild. He can now pick up arrows he's fired, and his bombs have been upgraded to remote bombs, so you can set them off when the timing is just right!",
+      "body": "In Santa Cecilia, Mexico, Miguel dreams of becoming a musician, even though his family strictly forbids it. His great-great-grandmother Imelda was married to a man who left her and their daughter Coco to pursue a career in music, and when he never returned, Imelda discarded all forms of music from her family's life before starting a shoemaking business.",
       "createDate": "2018/06/20",
       "likes": 7,
       "author": 3,
       "tags": [
-        4,
-        6,
         3,
         2
       ]
@@ -109,14 +98,13 @@
     {
       "id": 9,
       "title": "Moana",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American 3D computer-animated musical adventure film ",
       "image": "https://i.pinimg.com/564x/68/29/d6/6829d6ef01df34b50c776dddec0491ee.jpg",
-      "body": "He's smaller and faster than Link. His bombs explode with a unique anime-style. For his Final Smash, he emits light from his left hand and any opponents hit by it are trapped in the Triforce, subject to a punishing gauntlet of attacks. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "body": "On the Polynesian island of Motunui, the inhabitants worship the goddess Te Fiti, who brought life to the ocean using a pounamu stone as her heart and the source of her power. Maui, the shape-shifting demigod of the wind and sea and master of sailing, steals the heart to give humanity the power of creation.",
       "createDate": "2018/09/10",
       "likes": 7,
       "author": 3,
       "tags": [
-        4,
         6,
         3,
         2
@@ -125,48 +113,45 @@
     {
       "id": 10,
       "title": "Resident Evil",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "Action-horror film series based on the Japanese video game franchise by Capcom",
       "image": "https://i.pinimg.com/564x/7e/4a/b7/7e4ab7e63c4dbc2f7d4c6a59391fce71.jpg",
-      "body": "He can overwhelm his opponents with his quick movements, and his specials don't leave him open for counterattacks. His costume and voice have been redone to match his appearance in Star Fox Zero. This Fox is brand new! Come on!",
+      "body": "The films follow Alice (Milla Jovovich), a character created for the films. Alice is a former security specialist and covert operative who battles the Umbrella Corporation, whose bioweapons have triggered a zombie apocalypse.",
       "createDate": "2018/10/03",
       "likes": 7,
       "author": 3,
       "tags": [
+        1,
         4,
-        6,
-        3,
-        2
+        6
       ]
     },
     {
-      "id": 11,
       "title": "Orphan",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "Psychological horror film",
       "image": "https://i.pinimg.com/564x/c4/5c/2a/c45c2acfeba7c23642deb18aa47cadf6.jpg",
-      "body": "The leader of the Star Wolf mercenary team makes his grand return after 10 years! He puts his sharp claws to good use in wild attacks, and his Final Smash is an all-out attack by Team Star Wolf! If Fox or Falco is in the battle, you may hear a unique line of dialog.",
-      "createDate": "2018/08/30",
-      "likes": 7,
       "author": 3,
+      "body": "Kate and John Coleman's marriage is strained after the stillbirth of their third child Jessica, whose loss is particularly hard on Kate, a recovering alcoholic. The couple decide to adopt a 9-year-old Estonian girl, Esther, from the local orphanage",
+      "createDate": "2021/01/18",
       "tags": [
-        4,
-        6,
-        3,
-        2
-      ]
+        1,
+        4
+      ],
+      "likes": 8,
+      "id": 11
     },
     {
       "id": 12,
       "title": "IT",
-      "subTitle": "Super Smash Bros Ultimate",
+      "subTitle": "American supernatural horror film based on Stephen King's 1986 novel of the same name.",
       "image": "https://i.pinimg.com/564x/2f/b5/f8/2fb5f897cfd3e882a19f5cbb98dca860.jpg",
-      "body": "THE super princess. Watch out for her powerful kicks while she's airborne. Using her down special, she picks vegetables and throws them at her opponents. Sometimes she even gets items...like a Bob-omb!",
+      "body": "n October 1988, Bill Denbrough crafts a paper sailboat for Georgie, his six-year-old brother. Georgie sails the boat along the rainy streets of small town Derry, Maine, only to have it fall down a storm drain. As he attempts to retrieve it, Georgie sees a clown in the drain, who introduces himself as 'Pennywise the Dancing Clown'.",
       "createDate": "2019/07/12",
       "likes": 1,
       "author": 2,
       "tags": [
         1,
-        2,
-        3
+        4,
+        6
       ]
     }
   ],
@@ -230,13 +215,13 @@
     },
     {
       "id": 2,
-      "name": "Jonny",
-      "lastName": "Deep"
+      "name": "Robert",
+      "lastName": "Stromberg"
     },
     {
       "id": 3,
-      "name": "Bruce",
-      "lastName": "Wayne"
+      "name": "James",
+      "lastName": "Cameron"
     }
   ],
   "users": [
