@@ -255,10 +255,21 @@ img {
   height: 30px;
   transition: all 0.2s ease;
   cursor: pointer;
+  font-size: 0.7rem;
 }
 
 .author-dropdown:hover {
   height: 30px;
   background-color: #f1f1f1;
   /* max-width: 30%; */
+}
+
+.name-advertising,
+.subtitle-advertising,
+.cover-advertising,
+.author-advertising,
+.date-advertising,
+.content-advertising {
+  color: red;
+  font-size: 0.8rem;
 }

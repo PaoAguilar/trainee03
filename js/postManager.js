@@ -12,6 +12,14 @@ homeMenuButton.addEventListener("click", (e) => {
   window.location.href = "../index.html";
 });
 
+// setting todays date
+const date = new Date();
+const creationDate = document.querySelector("#date");
+creationDate.value = `${date.getFullYear()}/${
+  date.getMonth() + 1
+}/${date.getDate()}`;
+creationDate.setAttribute("disabled", "");
+
 const showAuthors = async () => {
   try {
     const authors = await JsonRequestSingleton.getInstance().getRequest(
