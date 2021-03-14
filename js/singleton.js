@@ -43,4 +43,18 @@ export default class JsonRequestSingleton {
       console.log(error);
     }
   }
+
+  async putRequest(body, id) {
+    try {
+      const res = await fetch(`${this.path}/posts/${id}`, {
+        method: "PUT",
+        body,
+        headers: { "content-type": "application/json" },
+      });
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }

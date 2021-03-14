@@ -62,6 +62,24 @@ const showForId = async () => {
             
         </div>
   `;
+  const likeButton = document.querySelector(".likes");
+  const numberOfLikes = document.querySelector(".icon-heart");
+  const like = {
+    likes: numberOfLikes.value,
+  };
+  const jsonData = JSON.stringify(like);
+  let count = 0;
+  console.log(numberOfLikes);
+  likeButton.addEventListener("click", async (e) => {
+    try {
+      // await JsonRequestSingleton.getInstance().putRequest(jsonData, id);
+      const likes = (numberOfLikes.value = ++count);
+      numberOfLikes.innerText = ` ${likes}`;
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
   const showComment = document.querySelector(".show-comment");
   commentInfo.map((result) => {
     showComment.innerHTML += `
@@ -73,7 +91,7 @@ const showForId = async () => {
 showForId();
 
 const deletePost = async () => {
-  const deleteIcon = document.querySelector(".delete-post");
+  const deleteIcon = document.querySelector(".icon-bin2");
   deleteIcon.addEventListener("click", async () => {
     console.log("click icon");
     await JsonRequestSingleton.getInstance().deleteRequest(id);

@@ -150,10 +150,15 @@ img {
 }
 
 .create-date,
-.likes,
 .author {
   color: #3f0d12;
   padding: 1rem;
+}
+
+.likes {
+  color: #3f0d12;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .show-comment {
