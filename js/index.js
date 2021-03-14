@@ -79,7 +79,9 @@ const showPosts = async () => {
     const posts = await JsonRequestSingleton.getInstance().getRequest("posts");
 
     console.log(posts);
-    const lastThree = posts.slice(8);
+    const startIndex = posts.length - 3;
+    console.log(startIndex);
+    const lastThree = posts.slice(startIndex);
     console.log(lastThree);
 
     // showing last three posts

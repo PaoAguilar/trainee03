@@ -15,4 +15,19 @@ export default class JsonRequestSingleton {
     const data = await res.json();
     return data;
   }
+
+  async postRequest(body, resource) {
+    console.log(resource);
+    try {
+      const res = await fetch(`${this.path}/${resource}`, {
+        method: "POST",
+        body,
+        headers: { "content-type": "application/json" },
+      });
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }

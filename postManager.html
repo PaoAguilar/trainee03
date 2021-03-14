@@ -15,7 +15,7 @@
       <div class="post-manager">
         <h2 class="title">Movies Manager</h2>
         <p>You can create a new post here</p>
-        <form action="#" class="form">
+        <form class="create-form">
           <div class="container-grid">
             <div class="wrap-elements">
               <!-- TITLE -->
@@ -65,7 +65,7 @@
               <ul class="dropdown"></ul>
               <!-- CREATION DATE -->
               <div class="input-group">
-                <label for="date" class="label">Date</label>
+                <label for="date" class="label">Creation Date</label>
                 <input
                   id="date"
                   placeholder="YYYY/MM/DD"
@@ -88,12 +88,13 @@
               <!-- TAGS -->
               <div class="input-group">
                 <label for="tag" class="label">Tags</label>
-                <input type="checkbox" id="science-fiction" value="1" /> Science
-                fiction <input type="checkbox" id="comedy" value="2" /> Comedy
-                <input type="checkbox" id="fantasy" value="3" /> Fantasy
-                <input type="checkbox" id="terror" value="4" /> Terror
-                <input type="checkbox" id="historical" value="5" /> Historical
-                <input type="checkbox" id="action" value="6" /> Action
+                <input type="checkbox" class="checked" id="science-fiction" value="1" /> Science
+                fiction 
+                <input type="checkbox" class="checked" id="comedy" value="2" /> Comedy
+                <input type="checkbox" class="checked" id="fantasy" value="3" /> Fantasy
+                <input type="checkbox" class="checked" id="terror" value="4" /> Terror
+                <input type="checkbox" class="checked" id="historical" value="5" /> Historical
+                <input type="checkbox" class="checked" id="action" value="6" /> Action
               </div>
               <span class="tag-advertising"></span>
             </div>
@@ -103,6 +104,6 @@
       </div>
     </section>
     <script type="module" src="./js/postManager.js"></script>
-    <script src="./js/requiredElements.js"></script>
+    <script type="module" src="./js/requiredElements.js"></script>
   </body>
 </html>

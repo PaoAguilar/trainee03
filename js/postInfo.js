@@ -46,9 +46,15 @@ const showForId = async () => {
         <div class="synopsis">${posts.body}</div>
         <div class="show-icons">
             <div class="show-icon-info">
-                <div class="create-date"><span class="icon icon-calendar"> ${posts.createDate}</span></div>
-                <div class="likes"><span class="icon icon-heart"> ${posts.likes}</span></div>
-                <div class="author"><span class="icon">Author: ${author.name} ${author.lastName}</span></div>
+                <div class="create-date"><span class="icon icon-calendar"> ${
+                  posts.createDate
+                }</span></div>
+                <div class="likes"><span class="icon icon-heart"> ${
+                  posts.likes || 0
+                }</span></div>
+                <div class="author"><span class="icon">Author: ${author.name} ${
+    author.lastName
+  }</span></div>
             </div>
             <h2 class="comment"><span class="icon icon-bubbles2"> Comments for the movie</span></h2>
             <div class="show-comment">
