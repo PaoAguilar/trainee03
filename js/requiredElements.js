@@ -55,7 +55,6 @@ createForm.addEventListener("submit", (e) => {
   } else {
     document.querySelector(".content-advertising").innerText = "";
   }
-  // console.log(valid);
   if (valid) {
     createNewPost(
       movieName,
@@ -66,6 +65,6 @@ createForm.addEventListener("submit", (e) => {
       content,
       checkedTags
     );
-    console.log(checkedTags);
+    window.location.href = "../index.html";
   }
 });

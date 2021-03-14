@@ -59,6 +59,7 @@ const showForId = async () => {
             <h2 class="comment"><span class="icon icon-bubbles2"> Comments for the movie</span></h2>
             <div class="show-comment">
             </div>
+            
         </div>
   `;
   const showComment = document.querySelector(".show-comment");
@@ -69,5 +70,15 @@ const showForId = async () => {
   });
   //   console.log(posts);
 };
-
 showForId();
+
+const deletePost = async () => {
+  const deleteIcon = document.querySelector(".delete-post");
+  deleteIcon.addEventListener("click", async () => {
+    console.log("click icon");
+    await JsonRequestSingleton.getInstance().deleteRequest(id);
+    window.location.href = "../index.html";
+  });
+};
+
+deletePost();
