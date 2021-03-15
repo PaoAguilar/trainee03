@@ -153,19 +153,6 @@
         4,
         6
       ]
-    },
-    {
-      "title": "Litle mermaid",
-      "subTitle": "La sirenita editada",
-      "image": "https://i.pinimg.com/564x/f9/4a/f0/f94af014f66abd5bb4a478a9a2160c4f.jpg",
-      "author": "3",
-      "createDate": "2021/3/14",
-      "body": "df",
-      "tags": [
-        5
-      ],
-      "likes": 6,
-      "id": 13
     }
   ],
   "tags": [
@@ -218,6 +205,12 @@
       "comment": "Test comment on post #2",
       "postId": 2,
       "user": 3
+    },
+    {
+      "user": "1",
+      "comment": "Añadiendo un comment",
+      "postId": "12",
+      "id": 4
     }
   ],
   "authors": [

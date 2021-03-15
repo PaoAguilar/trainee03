@@ -17,7 +17,7 @@ createForm.addEventListener("submit", (e) => {
     }
   });
   // console.log("hey");
-  // console.log(e.target.elements);
+  console.log(e.target.elements);
   let valid = true;
   if (movieName.value === "") {
     document.querySelector(".name-advertising").innerText = "Empty field";

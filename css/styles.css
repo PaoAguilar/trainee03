@@ -11,6 +11,11 @@ body {
 body h2 {
   color: #3f0d12;
 }
+body h3 {
+  color: #3f0d12;
+  display: flex;
+  justify-content: center;
+}
 
 .menu {
   width: 100%;
@@ -282,7 +287,8 @@ img {
 .cover-advertising,
 .author-advertising,
 .date-advertising,
-.content-advertising {
+.content-advertising,
+.user-advertising {
   color: red;
   font-size: 0.8rem;
 }
@@ -292,4 +298,9 @@ img {
   font-size: 3rem;
   cursor: pointer;
   text-align: center;
+  padding-top: 2rem;
+}
+
+.user-name {
+  color: #dd4058;
 }

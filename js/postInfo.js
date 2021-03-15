@@ -25,7 +25,6 @@ const id = urlParams.get("id");
 // console.log(id);
 
 const showForId = async () => {
-  const info = document.querySelector(".info");
   const posts = await JsonRequestSingleton.getInstance().getRequest(
     `posts/${id}`
   );
@@ -39,30 +38,16 @@ const showForId = async () => {
   const users = await JsonRequestSingleton.getInstance().getRequest(`users/1`);
   // console.log(commentInfo);
 
-  info.innerHTML += `
-  <div class="comment-container">
-        <h1 class="title">${posts.title}</h1>
-        <h2 class="subtitle">${posts.subTitle}</h2>
-        <img class="cover" src="${posts.image}" alt="" />
-        <div class="synopsis">${posts.body}</div>
-        <div class="show-icons">
-            <div class="show-icon-info">
-                <div class="create-date"><span class="icon icon-calendar"> ${
-                  posts.createDate
-                }</span></div>
-                <div class="likes"><span class="icon icon-heart"> ${
-                  posts.likes || 0
-                }</span></div>
-                <div class="author"><span class="icon">Author: ${author.name} ${
-    author.lastName
-  }</span></div>
-            </div>
-            
-              <h2 class="comment"><span class="icon icon-bubbles2"> Comments for the movie</span></h2>
-              <div class="show-comment"></div>   
-        </div>
-  </div>
-  `;
+  // Display the information
+  document.querySelector(".title").innerText = posts.title;
+  document.querySelector(".subtitle").innerText = posts.subTitle;
+  document.querySelector(".cover").src = posts.image;
+  document.querySelector(".synopsis").innerText = posts.body;
+  document.querySelector(".icon-calendar").innerText = ` ${posts.createDate}`;
+  document.querySelector(".icon-heart").innerText = ` ${posts.likes || 0}`;
+  document.querySelector(
+    ".author-name"
+  ).innerText = `Author: ${author.name} ${author.lastName}`;
 
   // Here I got all the id tags
   const idTags = [];
@@ -98,14 +83,73 @@ const showForId = async () => {
     }
   });
 
+  // show the comments
   const showComment = document.querySelector(".show-comment");
-  commentInfo.map((result) => {
+  commentInfo.map(async (result, index) => {
+    const users = await JsonRequestSingleton.getInstance().getRequest(
+      `users/${result.user}`
+    );
     showComment.innerHTML += `
-            <div>User: Comment: ${result.comment}</div>
+            <div class="user-name">${index + 1}. User: ${users.name} ${
+      users.lastName
+    }  </div>
+            <div>Comment: ${result.comment}</div>
             `;
   });
+
+  const userSelect = document.querySelector("#users-dropdown");
+  const commentText = document.querySelector("#comment-text");
+  const createCommentForm = document.querySelector(".comment-form");
+
+  createCommentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("click en comment");
+    let valid = true;
+    if (commentText.value === "") {
+      document.querySelector(".user-advertising").innerText = "Empty field";
+      valid = false;
+    } else {
+      document.querySelector(".user-advertising").innerText = "";
+    }
+    if (valid) {
+      addNewComment(userSelect, commentText, id);
+    }
+  });
 };
+
 showForId();
+
+// add new comment
+const addNewComment = async (user, commentText, postId) => {
+  const comment = {
+    user: user.value,
+    comment: commentText.value,
+    postId: postId,
+  };
+  const jsonData = JSON.stringify(comment);
+  try {
+    await JsonRequestSingleton.getInstance().postRequest(jsonData, "comments");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// dropdown of users
+const showUsers = async () => {
+  const usersDropDown = document.querySelector("#users-dropdown");
+  // console.log(usersDropDown);
+  try {
+    const users = await JsonRequestSingleton.getInstance().getRequest(`users`);
+    console.log(users);
+    users.map((result) => {
+      const opt = document.createElement("option");
+      opt.value = result.id;
+      opt.text = `${result.name} ${result.lastName}`;
+      usersDropDown.appendChild(opt);
+    });
+  } catch (error) {}
+};
+showUsers();
 
 // Click to edit page
 const clickToEditPage = () => {
