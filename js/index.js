@@ -19,7 +19,6 @@ searchMenuButton.addEventListener("click", (e) => {
 const showTags = async () => {
   try {
     const tags = await JsonRequestSingleton.getInstance().getRequest("tags");
-    // console.log(tags[0].name);
 
     tags.map((result) => {
       tagsContainer.innerHTML += `
@@ -48,7 +47,6 @@ const showPostForTags = async (clickedTag) => {
       `posts?tags_like=${clickedTag}`
     );
     posts.map((result) => {
-      // console.log(result);
       if (result === []) {
         postForTagContainer.innerHTML += `
         <div class="post">
@@ -67,8 +65,6 @@ const showPostForTags = async (clickedTag) => {
   const postDiv = document.querySelectorAll(`.post`);
   postDiv.forEach((element, index) => {
     element.addEventListener("click", () => {
-      // console.log(`hice click, ${index}`);
-      // console.log(element.id);
       window.location.href = `../postInfo.html?id=${element.id}`;
     });
   });
@@ -77,12 +73,8 @@ const showPostForTags = async (clickedTag) => {
 const showPosts = async () => {
   try {
     const posts = await JsonRequestSingleton.getInstance().getRequest("posts");
-
-    // console.log(posts);
     const startIndex = posts.length - 3;
-    // console.log(startIndex);
     const lastThree = posts.slice(startIndex);
-    // console.log(lastThree);
 
     // showing last three posts
     lastThree.map((result) => {
@@ -121,8 +113,6 @@ const showPosts = async () => {
   const postDiv = document.querySelectorAll(`.post`);
   postDiv.forEach((element, index) => {
     element.addEventListener("click", () => {
-      // console.log(`hice click, ${index}`);
-      // console.log(element.id);
       window.location.href = `../postInfo.html?id=${element.id}`;
     });
   });

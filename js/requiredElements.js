@@ -16,7 +16,6 @@ createForm.addEventListener("submit", (e) => {
       checkedTags.push(+checkBox.value);
     }
   });
-  // console.log("hey");
   console.log(e.target.elements);
   let valid = true;
   if (movieName.value === "") {

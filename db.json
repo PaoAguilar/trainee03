@@ -146,13 +146,27 @@
       "image": "https://i.pinimg.com/564x/2f/b5/f8/2fb5f897cfd3e882a19f5cbb98dca860.jpg",
       "body": "October 1988, Bill Denbrough crafts a paper sailboat for Georgie, his six-year-old brother. Georgie sails the boat along the rainy streets of small town Derry, Maine, only to have it fall down a storm drain. As he attempts to retrieve it, Georgie sees a clown in the drain, who introduces himself as 'Pennywise the Dancing Clown'.",
       "createDate": "2019/07/12",
-      "likes": 2,
+      "likes": 3,
       "author": 2,
       "tags": [
         1,
         4,
         6
       ]
+    },
+    {
+      "title": "Litle mermaid",
+      "subTitle": "La sirenita",
+      "image": "https://i.pinimg.com/564x/f9/4a/f0/f94af014f66abd5bb4a478a9a2160c4f.jpg",
+      "author": "3",
+      "createDate": "2021/3/14",
+      "body": "asd",
+      "tags": [
+        2,
+        3
+      ],
+      "likes": 1,
+      "id": 13
     }
   ],
   "tags": [
@@ -211,6 +225,18 @@
       "comment": "Añadiendo un comment",
       "postId": "12",
       "id": 4
+    },
+    {
+      "user": "1",
+      "comment": "addiing new comment",
+      "postId": "13",
+      "id": 5
+    },
+    {
+      "user": "1",
+      "comment": "Adding an example comment",
+      "postId": "11",
+      "id": 6
     }
   ],
   "authors": [

@@ -19,16 +19,13 @@ searchMenuButton.addEventListener("click", (e) => {
 
 // searching id from url
 const queryString = window.location.search;
-// console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
-// console.log(id);
 
 const showForId = async () => {
   const posts = await JsonRequestSingleton.getInstance().getRequest(
     `posts/${id}`
   );
-  // console.log(posts.id);
   const author = await JsonRequestSingleton.getInstance().getRequest(
     `authors/${posts.author}`
   );
@@ -36,7 +33,6 @@ const showForId = async () => {
     `comments/?postId=${posts.id}`
   );
   const users = await JsonRequestSingleton.getInstance().getRequest(`users/1`);
-  // console.log(commentInfo);
 
   // Display the information
   document.querySelector(".title").innerText = posts.title;
@@ -137,7 +133,6 @@ const addNewComment = async (user, commentText, postId) => {
 // dropdown of users
 const showUsers = async () => {
   const usersDropDown = document.querySelector("#users-dropdown");
-  // console.log(usersDropDown);
   try {
     const users = await JsonRequestSingleton.getInstance().getRequest(`users`);
     console.log(users);
@@ -155,7 +150,6 @@ showUsers();
 const clickToEditPage = () => {
   const editIcon = document.querySelector(".icon-pencil");
   editIcon.addEventListener("click", () => {
-    // console.log("clcik en edit");
     window.location.href = `../editPost.html?id=${id}`;
   });
 };
@@ -165,7 +159,6 @@ clickToEditPage();
 const deletePost = async () => {
   const deleteIcon = document.querySelector(".icon-bin2");
   deleteIcon.addEventListener("click", async () => {
-    // console.log("click icon");
     await JsonRequestSingleton.getInstance().deleteRequest(id);
     window.location.href = "../index.html";
   });
