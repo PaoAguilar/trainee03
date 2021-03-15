@@ -109,6 +109,7 @@ const showForId = async () => {
     }
     if (valid) {
       addNewComment(userSelect, commentText, id);
+      location.reload();
     }
   });
 };

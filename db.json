@@ -158,12 +158,11 @@
       "title": "Litle mermaid",
       "subTitle": "La sirenita",
       "image": "https://i.pinimg.com/564x/f9/4a/f0/f94af014f66abd5bb4a478a9a2160c4f.jpg",
-      "author": "3",
+      "author": "1",
       "createDate": "2021/3/14",
-      "body": "asd",
+      "body": "qqqqqq",
       "tags": [
-        2,
-        3
+        2
       ],
       "likes": 1,
       "id": 13
@@ -228,15 +227,27 @@
     },
     {
       "user": "1",
-      "comment": "addiing new comment",
-      "postId": "13",
-      "id": 5
-    },
-    {
-      "user": "1",
       "comment": "Adding an example comment",
       "postId": "11",
       "id": 6
+    },
+    {
+      "user": "1",
+      "comment": "testing comment for the movie",
+      "postId": "13",
+      "id": 7
+    },
+    {
+      "user": "1",
+      "comment": "Hola",
+      "postId": "13",
+      "id": 8
+    },
+    {
+      "user": "1",
+      "comment": "Otro comment",
+      "postId": "13",
+      "id": 9
     }
   ],
   "authors": [
