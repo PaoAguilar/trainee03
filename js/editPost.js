@@ -11,6 +11,25 @@ homeMenuButton.addEventListener("click", (e) => {
   window.location.href = "../index.html";
 });
 
+// dropdown
+const showAuthors = async () => {
+  const authorDropDown = document.querySelector("#author");
+  console.log(authorDropDown);
+  try {
+    const authors = await JsonRequestSingleton.getInstance().getRequest(
+      `authors`
+    );
+    console.log(authors);
+    authors.map((result) => {
+      const opt = document.createElement("option");
+      opt.value = result.id;
+      opt.text = `${result.name} ${result.lastName}`;
+      authorDropDown.appendChild(opt);
+    });
+  } catch (error) {}
+};
+showAuthors();
+
 // searching id from url
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
