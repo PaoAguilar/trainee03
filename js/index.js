@@ -117,6 +117,7 @@ const showPosts = async () => {
     console.log(error);
   }
 
+  // Goes to the create post page
   const postDiv = document.querySelectorAll(`.post`);
   postDiv.forEach((element, index) => {
     element.addEventListener("click", () => {

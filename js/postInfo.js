@@ -19,17 +19,17 @@ searchMenuButton.addEventListener("click", (e) => {
 
 // searching id from url
 const queryString = window.location.search;
-console.log(queryString);
+// console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
-console.log(id);
+// console.log(id);
 
 const showForId = async () => {
   const info = document.querySelector(".info");
   const posts = await JsonRequestSingleton.getInstance().getRequest(
     `posts/${id}`
   );
-  console.log(posts.id);
+  // console.log(posts.id);
   const author = await JsonRequestSingleton.getInstance().getRequest(
     `authors/${posts.author}`
   );
@@ -37,7 +37,7 @@ const showForId = async () => {
     `comments/?postId=${posts.id}`
   );
   const users = await JsonRequestSingleton.getInstance().getRequest(`users/1`);
-  console.log(commentInfo);
+  // console.log(commentInfo);
 
   info.innerHTML += `
         <h1 class="title">${posts.title}</h1>
@@ -63,21 +63,18 @@ const showForId = async () => {
         </div>
   `;
 
-  // Here a got all the id tags
+  // Here I got all the id tags
   const idTags = [];
   posts.tags.map((elem) => {
-    console.log(elem);
     idTags.push(elem);
   });
-  console.log(idTags);
-  // console.log(Array.from(idTags));
 
   // Make likes to the post
   const likeButton = document.querySelector(".likes");
   const numberOfLikes = document.querySelector(".icon-heart");
   let count = 0;
   likeButton.addEventListener("click", async (e) => {
-    console.log(e.target.elements);
+    // console.log(e.target.elements);
     try {
       count = count + 1;
       const countingLikes = posts.likes + count;
@@ -94,7 +91,7 @@ const showForId = async () => {
         likes: countLikes,
       };
       const jsonData = JSON.stringify(editPost);
-      await JsonRequestSingleton.getInstance().putRequest(jsonData, id);
+      await JsonRequestSingleton.getInstance().patchRequest(jsonData, id);
     } catch (error) {
       console.log(error);
     }
@@ -109,10 +106,21 @@ const showForId = async () => {
 };
 showForId();
 
+// Click to edit page
+const clickToEditPage = () => {
+  const editIcon = document.querySelector(".icon-pencil");
+  editIcon.addEventListener("click", () => {
+    // console.log("clcik en edit");
+    window.location.href = `../editPost.html?id=${id}`;
+  });
+};
+clickToEditPage();
+
+// Delete a Post
 const deletePost = async () => {
   const deleteIcon = document.querySelector(".icon-bin2");
   deleteIcon.addEventListener("click", async () => {
-    console.log("click icon");
+    // console.log("click icon");
     await JsonRequestSingleton.getInstance().deleteRequest(id);
     window.location.href = "../index.html";
   });

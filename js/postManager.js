@@ -26,18 +26,18 @@ const showAuthors = async () => {
     const authors = await JsonRequestSingleton.getInstance().getRequest(
       `authors`
     );
-    console.log(authors);
+    // console.log(authors);
     const authorInput = document.querySelector("#author");
     const dropDown = document.querySelector(".dropdown");
 
     authorInput.value = authors[0].id;
 
     authorInput.addEventListener("click", () => {
-      console.log("hi");
+      // console.log("hi");
       authors.map((result) => {
         const authorElement = document.createElement("li");
         const line = document.createElement("hr");
-        console.log(result);
+        // console.log(result);
         authorElement.classList.add("author-dropdown");
         authorElement.innerText = `${result.name} ${result.lastName}`;
         authorElement.addEventListener("click", () => {

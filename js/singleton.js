@@ -44,10 +44,10 @@ export default class JsonRequestSingleton {
     }
   }
 
-  async putRequest(body, id) {
+  async patchRequest(body, id) {
     try {
       const res = await fetch(`${this.path}/posts/${id}`, {
-        method: "PUT",
+        method: "PATCH",
         body,
         headers: { "content-type": "application/json" },
       });
