@@ -22,12 +22,10 @@ creationDate.setAttribute("disabled", "");
 // Show authors in the dropdown
 const showAuthors = async () => {
   const authorDropDown = document.querySelector("#author");
-  console.log(authorDropDown);
   try {
     const authors = await JsonRequestSingleton.getInstance().getRequest(
       `authors`
     );
-    console.log(authors);
     authors.map((result) => {
       const opt = document.createElement("option");
       opt.value = result.id;
