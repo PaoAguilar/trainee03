@@ -1,5 +1,4 @@
 import JsonRequestSingleton from "./singleton.js";
-
 const searchMenuButton = document.querySelector("#search");
 const homeMenuButton = document.querySelector("#home");
 
@@ -21,32 +20,48 @@ creationDate.value = `${date.getFullYear()}/${
 creationDate.setAttribute("disabled", "");
 
 // Show authors in the dropdown
+// const showAuthors = async () => {
+//   try {
+//     const authors = await JsonRequestSingleton.getInstance().getRequest(
+//       `authors`
+//     );
+//     // console.log(authors);
+//     const authorInput = document.querySelector("#author");
+//     const dropDown = document.querySelector(".dropdown");
+
+//     authorInput.value = authors[0].id;
+
+//     authorInput.addEventListener("click", () => {
+//       // console.log("hi");
+//       authors.map((result) => {
+//         const authorElement = document.createElement("li");
+//         const line = document.createElement("hr");
+//         // console.log(result);
+//         authorElement.classList.add("author-dropdown");
+//         authorElement.innerText = `${result.name} ${result.lastName}`;
+//         authorElement.addEventListener("click", () => {
+//           authorInput.value = result.id;
+//           dropDown.innerHTML = "";
+//         });
+//         dropDown.appendChild(authorElement);
+//         dropDown.appendChild(line);
+//       });
+//     });
+//   } catch (error) {}
+// };
 const showAuthors = async () => {
+  const authorDropDown = document.querySelector("#author");
+  console.log(authorDropDown);
   try {
     const authors = await JsonRequestSingleton.getInstance().getRequest(
       `authors`
     );
-    // console.log(authors);
-    const authorInput = document.querySelector("#author");
-    const dropDown = document.querySelector(".dropdown");
-
-    authorInput.value = authors[0].id;
-
-    authorInput.addEventListener("click", () => {
-      // console.log("hi");
-      authors.map((result) => {
-        const authorElement = document.createElement("li");
-        const line = document.createElement("hr");
-        // console.log(result);
-        authorElement.classList.add("author-dropdown");
-        authorElement.innerText = `${result.name} ${result.lastName}`;
-        authorElement.addEventListener("click", () => {
-          authorInput.value = result.id;
-          dropDown.innerHTML = "";
-        });
-        dropDown.appendChild(authorElement);
-        dropDown.appendChild(line);
-      });
+    console.log(authors);
+    authors.map((result) => {
+      const opt = document.createElement("option");
+      opt.value = result.id;
+      opt.text = `${result.name} ${result.lastName}`;
+      authorDropDown.appendChild(opt);
     });
   } catch (error) {}
 };
