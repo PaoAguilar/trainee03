@@ -40,6 +40,7 @@ const showForId = async () => {
   // console.log(commentInfo);
 
   info.innerHTML += `
+  <div class="comment-container">
         <h1 class="title">${posts.title}</h1>
         <h2 class="subtitle">${posts.subTitle}</h2>
         <img class="cover" src="${posts.image}" alt="" />
@@ -56,11 +57,11 @@ const showForId = async () => {
     author.lastName
   }</span></div>
             </div>
-            <h2 class="comment"><span class="icon icon-bubbles2"> Comments for the movie</span></h2>
-            <div class="show-comment">
-            </div>
             
+              <h2 class="comment"><span class="icon icon-bubbles2"> Comments for the movie</span></h2>
+              <div class="show-comment"></div>   
         </div>
+  </div>
   `;
 
   // Here I got all the id tags

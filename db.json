@@ -144,9 +144,9 @@
       "title": "IT",
       "subTitle": "American supernatural horror film based on Stephen King's 1986 novel of the same name.",
       "image": "https://i.pinimg.com/564x/2f/b5/f8/2fb5f897cfd3e882a19f5cbb98dca860.jpg",
-      "body": "n October 1988, Bill Denbrough crafts a paper sailboat for Georgie, his six-year-old brother. Georgie sails the boat along the rainy streets of small town Derry, Maine, only to have it fall down a storm drain. As he attempts to retrieve it, Georgie sees a clown in the drain, who introduces himself as 'Pennywise the Dancing Clown'.",
+      "body": "October 1988, Bill Denbrough crafts a paper sailboat for Georgie, his six-year-old brother. Georgie sails the boat along the rainy streets of small town Derry, Maine, only to have it fall down a storm drain. As he attempts to retrieve it, Georgie sees a clown in the drain, who introduces himself as 'Pennywise the Dancing Clown'.",
       "createDate": "2019/07/12",
-      "likes": 1,
+      "likes": 2,
       "author": 2,
       "tags": [
         1,
@@ -166,19 +166,6 @@
       ],
       "likes": 6,
       "id": 13
-    },
-    {
-      "title": "Batban",
-      "subTitle": "de la noche",
-      "image": "https://i.pinimg.com/564x/05/8e/cd/058ecd3c3b0c72ff141256b9f97373a0.jpg",
-      "author": "2",
-      "createDate": "2021/3/14",
-      "body": "sdf",
-      "tags": [
-        2
-      ],
-      "likes": 1,
-      "id": 14
     }
   ],
   "tags": [
