@@ -2,7 +2,7 @@
 
 ## Deploy
 
-### [Go to the homework](https://homework-week03-68vm6aa78-paoaguilar.vercel.app/index.html/)
+### [Go to the homework](https://homework-week03-68vm6aa78-paoaguilar.vercel.app/index.html)
 
 ## You also need to run the json server
 Name of the file: db.json
